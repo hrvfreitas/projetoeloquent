@@ -17,7 +17,7 @@ class CreateLivrosTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->decimal('preco');
-            $table->int_unsigned('editora_id');
+            $table->('editoras_id')->references('id')->on('editoras');
 
         });
     }
